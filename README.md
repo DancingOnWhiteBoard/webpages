@@ -4,4 +4,6 @@
 ## これがh2?
 ### これがh3?
 コメントはどう描くんだろうか？改行は？
-webpagesにあるindex.htmlは重要、消してはならない。このリポジトリをwebとして認識させるために必要。setting,pages,noneをmainに変更。
+webpagesにあるindex.htmlは重要、消してはならない?
+このリポジトリをwebとして認識させるために必要?
+setting,pages,noneをmainに変更だけでよいのでは？
