@@ -2,6 +2,8 @@
 
 h1{
     color:red;
+    border-bottom:3px dashed;
+    border-top:3px dotted;
 }
 
 img{
