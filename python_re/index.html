@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WR8KBPF');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="keywords" content="バックスラッシュ,python,re,正規表現,ダンシングオンホワイトボード,dancingonwhiteboard,少なくとも一つ"/>
+    <meta name="description" content="ダンシング。webでバックスラッシュ。どうやって？あとpythonのreでパスワード表現。このページはとっても有用です。なぜなら、reの説明が書かれているからです。しかもそれを、あの著名なダンシングオンホワイトボードが書いているのです。"/>
+    <meta name="author" content="ダンシングオンホワイトボード"/>
+    <title>webページでバックスラッシュ表示させるには、cssでspanでfont-family:Arial;とし、バックスラッシュのhtml特殊文字(＆＃９２；をすべて半角英数にしたもの)をspanタグで挟むとできる。</title>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR8KBPF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <h1>webページでのバックスラッシュの表示方法とpythonでのパスワード表現</h1>
+        <p>import re<br>
+        test='w23ieA98MoneyLove' <br>
+        m=re.findall(r'(?=.*[A-Z])(?=.*\d)\w{8,16}',text) <br>
+        #少なくとも1つ以上のアルファベット大文字と数字を含む８から16文字の文字列<br>
+        一致したものが、リストで返される。
+        </p>
+        <h2>バックスラッシュはどうやって表示するんだろうか？円マークになってしまう。困った。</h2>
+            <p>\\バックスラッシュ×2?、それとも円マーク￥全角だけど</P>
+    <h1>webブラウザでバックスラッシュを表示する方法は、こうだ！</h1>
+        <p>&#92; ＆＃９２； or &yen;　＆yen;</p>
+        <h2>re.match(r'(?=.*[A-Z])(?=.*&#92;d)&#92;w{8,16}',text)<br>
+            <p>以上である。</p>
+        </h2>
+    <h1>
+        いや、失敗だ
+    </h1>
+        <h2>
+            html特殊文字という方法らしいができない。<br>
+            というか、半角英数表示の円記号はどうやって入力するんだ？という問題も発生。<br>
+            font-familyでArial 欧文フォントに指定する必要あり。cssのspanで指定。
+        </h2>
+            <p><span>&#92;そして &yen;</span></p>
+    <h1>最後に改めて正規表現しよう</h1>
+        <h2>re.match(r'(?=.*[A-Z])(?=.*<span>&#92;</span>d)<span>&#92;</span>w{8,16}',text)</h2>
+</body>
+</html>
