@@ -2,8 +2,8 @@
 
 h1{
     color:red;
-    border-bottom:3px dashed black;
-    border-top:3px dotted blue;
+    border-bottom:3px double green;
+    border-top:3px solid green;
 }
 
 img{
