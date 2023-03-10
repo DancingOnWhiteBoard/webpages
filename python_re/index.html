@@ -51,6 +51,31 @@
             <p><span>&#92;そして &yen;</span></p>
     <h1>最後に改めて正規表現しよう</h1>
         <h2>re.match(r'(?=.*[A-Z])(?=.*<span>&#92;</span>d)<span>&#92;</span>w{8,16}',text)</h2>
+    
+    
+        <h1>Google search consoleでURL検査をすると、リダイレクトエラーになる理由<br>
+            およびPytohで、11月の英語表記Novを数字に変換
+        </h1>
+        <h2>import datetime<br>
+            p=datetime.datetime.strptime('Nov','%b')<br>
+            print(p.month)<br>
+            #11と出力される。
+        </h2>
+        <p> Novenberなら、%Bだ。<br>
+            ちなみに、pはstr<strong>p</strong>timeのpだ。
+        </p>
+        <h2>Google Search Consoleにおいて、全然インデックス登録がされないんです。<br>
+            登録可能となっているんですけどね？
+        </h2>
+        <p>有用じゃないページということ？URLの重複？サイトマップを送ったら、成功となるし？さっぱりわからん。</p>
+        <h1>
+            原因は、「Google Search ConsoleのURL検査で最後に　/ を入れていないからだ！<br>
+            /　を入れないと、リダイレクトする。http statusが301になる。すなわち、恒久的な移動。どこに移動してるのか知らないけど。
+        </h1>
+            <p>
+                そのあと、すぐ200になる。webサイトのhttpstatus.ioにて確認。<br>
+                間違ったURLを自動で補正してくれているのだろうか？しかし、それをエラーと認識するのだろう。
+            </p>
     <a href="https://dancingonwhiteboard.github.io/webpages/"><strong>関連のwebページはこちら</strong></a>
 </body>
 </html>
