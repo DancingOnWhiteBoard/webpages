@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+img{
+    width:400px;
+    height:auto;
+}
+
+.red{
+    color:red;
+    font-size: 150%;
+}
+
+h1{
+    border:solid 3px;
+    color: white;
+    background-color:rgb(51, 10, 10);
+    padding:3%;
+    border-radius: 30px;
+}
+
+h2{
+    border: solid 2px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: gainsboro;
+}
+
+.cancel{
+    text-decoration:line-through 2px solid;
+}
+
+p{
+    background-color: papayawhip;
+    font-size: 110%;
+    padding: 5px;
+}

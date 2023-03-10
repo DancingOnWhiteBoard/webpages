@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WR8KBPF');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="すでにWin11(21H2)にしているスペック要件を満たさないPC、Thinkpad x270を22H2のwin11にアップデートした。スペック要件を満たさないPCには22H2は待っていても来ないようなので、win11のISOファイルを使ってアップデートすることにした。結果、回避の操作など一切なくすんなりできた。WSAのインストール。sololearnのインストール">
+    <link rel="stylesheet" href="style.css">
+    <meta name="keywords" content="Thinkpad x270,win11,22H2,WSA,ISO,Sololearn">
+    <title>Win11(バージョン21H2)のThinkPad X270を22h2のWin11のISOを使ってアップデートした。さらにWSAを使用可能にしSololearnのインストールした。</title>
+
+   
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR8KBPF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <h1>どうやらスペック要件を満たさないPCには22H2は来ないようなので、<br>
+        Win11(バージョン21H2)のThinkPad X270をWin11(バージョン22H2)のISOファイルを使ってアップデートした。
+    </h1>    
+        <h2>システム要件回避の操作もなく、すんなりできた。 まぁ、少し気になるところはあるが・・・・。</h2>
+            <P> 前提条件：<br>
+                このthinkpad x270(corei5-72100u)はWin11のCPUスペック要件を満たしていないが、TPM2.0はある。<br>
+                それをマイクロソフト公表の非推奨方法により、すでにWin11にアップグレイドしていた。Win11のバージョンは21H2である。<br>
+                そして、この方法によりWin11にアップグレイドしたPCにはバージョン22H2のWin11の更新は来ないらしいという情報を目にした。（TPM1.2がない場合の方法の方はどうかは知らない）<br>
+                それでWin11(バージョン22H2)のISOファイルを使って、手動でアップデートしようとしたわけである。<br>
+                リスクはあるが、それ以上にエクスプローラーのタブ化機能が追加されることの方が魅力的である。間違いなく使い勝手がよくなると分かりきっているからだ。<br>
+                やらないわけにはいかない。<br>
+                事前に要件回避の方法などを調べて、bitlockerの回復キーもメモして、回復ドライブも作成して、入念に準備をして、<br>
+                <strong class="red">いざ開始。</strong>            
+            </P>
+        <h2>Win11(22H2)のISO(5.1GB)を入手、そしてsetup.exeの実行</h2>
+            <p>事前に調べておいたシステム要件の回避方法：<br>
+               以下サイト参照のこと。<br>
+               <a href="https://4thsight.xyz/44516">https://4thsight.xyz/44516   &nbsp;&nbsp; Windows11を手動でバージョン22H2にアップデートする方法</a>   
+            </p>
+        <h2>さぁ、「システム要件を満たしていませんの画面よ来い」と待っていたら、「ライセンス条項に同意する」の画面が出る。</h2>
+            <p>え？個人ファイルを引き継ぐのチェックを確認して、次へを押す。</p>
+            <img src="picture/スクリーンショット (1).png" alt="win11インストール" title="ライセンス条項同意後の状態">
+            <img src="picture/スクリーンショット (4).png" alt="win11インストール個人ファイルにチェック">
+        <h2>「Windows11をインストールしています」の画面になる</h2>
+            <p>あのー？システム要件回避の操作一切行っていないのですけれどー？</p>
+        <h2>14:42終了(13:15開始)、こんにちは画面。回復キーの入力もなし</h2>
+            <img src="picture/スクリーンショット (11).png" alt="win11 22h2インストール確認">
+            <p>あっけない。2時間かからない。回復ドライブの作成のほうが時間かかった。</p>
+        <h2>システムでバージョンを確認、22H2になっているが、更新の履歴ではWin10 21H2のまま。<br>
+            (これは最初にWin11にしたときから、表示がおかしかった部分で変わらない)</h2>
+            <img src="picture/スクリーンショット (10).png" alt="win11更新履歴">
+        <h2>あれ？エクスプローラーがタブ化していない</h2>
+            <p>アップデート後の更新、再起動でベースシステム用 win11 version 22H2 累積更新プログラム(KB5018496)のダウンロード、インストール、再起動で解決。</p>
+            <img src="picture/スクリーンショット (7).png" alt="win11更新、エクスプローラーのタブ化案内">
+            <img src="picture/スクリーンショット (9).png" alt="エクスプローラのタブ化">
+        <h2>おわりに</h2>
+            <p>更新の履歴の部分の表示に一か所気になるところはあるけれど、Win11 version 22H2の更新は来ているので問題はないと考えます。<br>
+               メインPCなので、不具合が出ないことを願うばかりです。
+            </p>
+
+    <h1>Win11 22H2の結構気になる変更点</h1>
+        <h2>動画(.mp4)の既定のアプリが映画からメディアプレーヤーに変更になったようだ</h2>
+            <img src="picture/スクリーンショット (12).png" alt="/mp4の規定のアプリがメディアプレーヤー">
+            <p>動画を再生するとわかるのですが、既定のアプリがメディアプレーヤーに変更になっているんです。それ自体は別にいいのですが、ちゃんと再生できるので。<br>
+                 問題は、再生の履歴が残ること。それを消すことはできるけど、毎回消さないといけないこと。設定に履歴を残さないみたいな項目がないのです。<br>
+                既定のアプリを映画に戻せばいいのだけれど、新しいメディアプレーヤーを使いたいとも思うわけです。悩ましい。
+            </p>
+            <p>やっぱりめんどいということで後日、mp4のみ既定のアプリを映画＆テレビに変更しました。</p>
+         <h2>それでも一番の注目はやはりandroidアプリが使えるようになったこと</h2>
+            <p class="cancel">まだ試していない</p>
+                
+    <h1>Win11のスペック基準を満たしていないPCにWSA(Windows Subsystem for Android)を入れた</h1>
+        <p>スペック基準を満たしていないWin11はMicrosoftStoreにAmazonストアが表示されないのです。何とかして見つけても、インストールできませんとなっているのです。<br>
+            <img src="picture/スクリーンショット (13).png" alt=""> <br>
+            なので、以下のサイトの方法でインストールしました。参照サイトはこちら<br> 
+            <a href="https://smartasw.com/archives/13908">https://smartasw.com/archives/13908  &nbsp;&nbsp; Windows 11 Subsystem for Androidを手動でインストールする方法</a>
+        </p>
+        <p>terminalでインストールしようとすると、エラー。参考サイトの記載通り対処。私の場合はx64でした。</p>
+        <img src="picture/スクリーンショット (19).png" alt="amazonストア">
+
+        <p>なんだかんだでできました。おすすめの項目にWSAが加わっています。</p>
+        <img src="picture/スクリーンショット (21).png" alt="">
+        <p>さらにAmazonストアらしきものも、加わりました。</p>
+        <img src="picture/スクリーンショット (22).png" alt="">
+        <img src="picture/スクリーンショット (23).png" alt="">
+        <p>しっかりできました。</p>
+
+    <h1>では、実際にWSAを使ってみる。android版のsololearnを入れる</h1>
+        <h2>Amazonアプリストアでsololearnを検索、ないのでKindle入れる</h2>
+            <p>見つからない。なので、ほかのものを入れてみた。Kindleというやつ。</p>
+            <img src="picture/スクリーンショット (24).png" alt="kindle">
+            <p>できた、無料の本読めた。けど、メールで注文を受け付けましたと来たのだけれど、有料のを押していたらどうなるのだろうか？支払方法の選択画面が出るんだろうか？Kindleのほうで注文を取り消すボタン押しても失敗するし、無料だから別にいいけど。</p>
+            <p>しかし、目的はsololearn。android版のsololearnであれば、challengeがPCでできるはず。これが目的。<br>
+                webでapkファイルを探してみる。
+            </p>
+            <img src="picture/Screenshot 2022-11-05 121901.png" alt="sololearnのapk file"> 
+            <p>見つかった。</p>
+        <h2>sololearn.apkをWSAにインストールする。MicrosoftStoreからWSA sideloaderを入手</h2>
+            <p>WSAにapkファイルをインストールするにはadbコマンドを使うが、MicrosoftStoreにあるWSA sideloaderを使えば簡単に行える。<br>
+            <img src="picture/Screenshot 2022-11-05 122010.png" alt="WSA sideloader"> 
+            </p>
+            <p>WSAの開発者モードをONにする。WSA sideloarderを実行。adbを許可してくださいと出るので許可を押しても、同じことを何回も繰り返すことになる。<br>
+                常に許可するにチェックを入れないといけないらしい。チェックを入れるとインストール成功。 
+            </p>
+            <img src="picture/Screenshot 2022-11-05 123744.png" alt="androidのsololearn">
+            <p>上手くいった。これでパソコンでsololearnのchallengeができる。<br>
+                しかし、あれ？とも思う。というのも、この方法でapk簡単に入れれるならば、Amazonストアの存在意義がないからだ。ろくなアプリないわけで、だれが使うんだろかと疑問に思う。<br>
+                他のandroid端末のplayストアでほしいアプリ見つけておいて、webでそのapkを入手という方法を多くの人はとるんじゃないだろうか？<br>
+                playストアがインストールできれば良いのだけれど、出来るんだろうか？ 
+            </p>
+        <h2>いざ、sololernでcharengeだ</h2>
+            <img src="picture/スクリーンショット (26).png" alt="sololearn log in menu">
+            <p>sololearnを起動するとログイン画面が出るが、googeで継続を押しても押ささらない（失礼、多分これ方言です）。なので、e-mailでsign inを選択。passwordの入力の必要があるのだけれどそんなの設定した記憶が・・・・。<br>
+               sololearnの設定を見てみると、change passwordという項目があるのを発見。入力してみる。なんかできた。ということで、パスワードが設定できたようなので、PCに入力。すると、 
+            </p>
+            <img src="picture/スクリーンショット (25).png" alt="sololeran sign ing after">
+            <p>見事、サインインできました。さあ、challengeだ。</p>
+            <img src="picture/スクリーンショット (27).png" alt="sololearn comunity">
+            <p>できました。画面が大きいのでコードが見やすい。インデントが分かりやすい。</p>
+        <h2>最後に</h2>
+            <p>結局、新しいPCが欲しいという結論になる。このパソコン、HDでFHDじゃないので見ずらいし、TFTで視野角せまいし、12.5インチなので画面も小さいし。<br>
+                Win11のスペック基準なんて気にしなくていい最新のやつが欲しい。<br>
+                coreシリーズの11 or 12世代くらいの中古で5万円くらいで。タッチパネルでノングレアでキーバックライトもあって、薄くて、軽くて、バッテリー持ちが70%or80%充電で15時間以上は欲しい。<br>
+                メモリは16GBがいいけどそれはあきらめて8GBで、ストレージはSSDで512GB。あと、USBPDも欲しいのでThunderbolt3以上が良い。それと顔よりも指紋認証があると良い。さらにスマホにNFCがないのでマイナンバーカードを読み込めるNFC機能があるといいね。<br>
+                という結論でした。<br>
+                以上、ご清聴ありがとうございました。
+            </p>
+    <footer><a href="https://dancingonwhitboard.github.io/">To Top Page</a></footer>
+</body>
+
+</body>
+</html>
