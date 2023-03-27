@@ -10,3 +10,9 @@ img{
     width:300px;
     height:auto;
 }
+
+.blue{
+    color: blue;
+    font-size: 110%;
+    font-weight: bold;
+}
