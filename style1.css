@@ -44,5 +44,7 @@ aside{
 
 ul.inline li{
     display:inline;
-    border:solid 2px;
+    border:solid 1px;
+    background-color: cornflowerblue;
+    width:30px;
 }
