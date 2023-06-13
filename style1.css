@@ -44,5 +44,5 @@ aside{
 
 ul.inline li{
     display:inline;
-    
+    border:solid 2px;
 }
