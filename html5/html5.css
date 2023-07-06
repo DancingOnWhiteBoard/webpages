@@ -3,6 +3,14 @@
 body{
     
 }
+]
+header{
+    border:solid 3px;
+}
+
+footer{
+    border:solid 5px;
+}
 
 main{
     display: flex;
