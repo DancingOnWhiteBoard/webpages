@@ -19,6 +19,7 @@ section#main{
 
 aside{
     flex:1;
+    border:solid 5px ;
 }
 
 article{
