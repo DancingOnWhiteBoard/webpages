@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+body{
+    margin:5px;
+    padding:5px;
+}
+
 main{
     display: flex;
 }
