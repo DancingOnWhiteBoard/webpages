@@ -1,11 +1,12 @@
 @charset "utf-8";
 
 body{
-    
+
 }
-]
+
 header{
     border:solid 3px;
+    background-color: aqua;
 }
 
 footer{
