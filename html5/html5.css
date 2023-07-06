@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+main{
+    display: flex;
+}
+
+section #main{
+    flex:3;
+}
+
+aside{
+    flex:1;
+}
