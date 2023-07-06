@@ -7,11 +7,13 @@ body{
 header{
     border:solid 3px;
     background-color: aqua;
+    margin:20px;
 }
 
 footer{
     border:solid 5px;
     height: 50px;
+    margin:20px;
 }
 
 main{
