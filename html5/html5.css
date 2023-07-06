@@ -11,3 +11,7 @@ section #main{
 aside{
     flex:1;
 }
+
+article{
+    flex:1;
+}
