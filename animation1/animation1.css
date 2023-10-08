@@ -1,2 +1,13 @@
 @charset "utf-8";
 
+main{
+    display: flex;
+}
+
+#main{
+    flex:3
+}
+
+#side{
+    flex:1
+}
