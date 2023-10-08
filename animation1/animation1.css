@@ -5,9 +5,11 @@ main{
 }
 
 #main{
-    flex:3
+    flex:3;
+    border:3px solid blue;
 }
 
 #side{
-    flex:1
+    flex:1;
+    border:3px solid green;
 }
