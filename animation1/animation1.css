@@ -18,10 +18,11 @@ main{
     background-color: blueviolet;
 }
 
-div{
+#sample1{
     background-color: brown;
     animation-name: example1;
     animation-duration: 5s;
+    animation-iteration-count: 5;
     
 }
 
@@ -36,6 +37,6 @@ div{
     100%{
         width:400px;
         height:400px;
-        background-color: black;
+        background-color: green;
     }
 }
