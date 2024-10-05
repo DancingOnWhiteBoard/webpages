@@ -6,20 +6,24 @@ Start-Sleep -Seconds 2
 #なんかうまくいかないので別の操作を入れたらどうだろか？と思い、スタートメニューを出した。そしたら、できた。
 [System.Windows.Forms.SendKeys]::SendWait("^{esc}")
 
+#alt+f4、powershell閉じた？
 [System.Windows.Forms.SendKeys]::SendWait("%{f4}")
 Start-Sleep -Seconds 2
 
+#alt+f4、ウィンドウズンシャットダウンポップアップ表示
 [System.Windows.Forms.SendKeys]::SendWait("%{f4}")
 
 #なんかaltキーが固定キーモードになるので、一回altキーを押した、するとなぜか解除される。固定キー無効になる？ｓ
 [System.Windows.Forms.SendKeys]::SendWait("%")
 
 Start-Sleep -Seconds 2
-#シャットダウン項目の選択、上一回なのか、2回なのかは端末によるので、それぞれで調整してください。1回なら2つ目#外して。
+#シャットダウン項目の選択、上一回なのか、2回なのかは端末によるので、それぞれで調整してください。1回なら2つ目#つけて。
+#CTRL+矢印上
 [System.Windows.Forms.SendKeys]::SendWait("^{UP}")
 [System.Windows.Forms.SendKeys]::SendWait("^{UP}")
 
 Start-Sleep -Seconds 2
+#ENTER
 [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")
 
 
