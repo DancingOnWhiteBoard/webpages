@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Windows11でデスクトップにスリープアイコンを作る</title>
+    <title>Windows11でデスクトップにスリープアイコンを作る。クリック１つでｐｃをスリープ。休止ではない。</title>
 </head>
 <body>
-    <h1>デスクトップにスリープアイコンを作り、クリック1つでPCをスリープ状態にする。休止じゃないよー。<br>
-        
+    <h1>Windows11でデスクトップにスリープアイコンを作り、クリック1つでPCをスリープ状態にする。休止じゃないよー。<br>
+        .batファイルと.ps1ファイルを使う。powershellでalt+f4以降の一連の動作を自動化＞
     </h1>
         <p>
             私のPCにはスリープボタンなるものがないので、ボタン一つでスリープにしたいと思ったわけです。ラップトップなので、設定でカバーを閉じたらスリープにすることもできるのですが、
@@ -25,7 +25,7 @@
         .batファイルと.ps1ファイルを作成して実現。いろいろ気になる点は残ったが、目的の「アイコンをクリックして、スリープする」はできたので、良しとする。<br>
         これがそのファイル。<br>
         1つ目は、クリックするとダウンロードされるようです。<br>
-        2つ目は、windows defenderに防がれるようです。<br>
+        2つ目は、windows defenderに防がれるようです。が、ダウンロードはされているようです。<br>
         <a href="https://dancingonwhiteboard.github.io\webpages\sleep\sleep1.ps1">sleep1.ps1</a><br>
         sleep1.ps1というファイル名。<br>
         内容はこんな感じ。<br>
@@ -33,9 +33,9 @@
 
         <a href="https://dancingonwhiteboard.github.io\webpages\sleep\スリープ.bat">スリープ</a><br>
         スリープ.batというファイル名だが、お好きに変更どうぞ。<br>
-        ダウンロードできないようなので、拡張子を.txtにしました。使用時は .bat　に変更してください。<br>
+        拡張子を.txtにしました。使用時は .bat　に変更してください。<br>
         <a href="https://dancingonwhiteboard.github.io\webpages\sleep\スリープ.txt">スリープ</a><br>
-        自動的には、ダウンロードされないようなので、コピーして使ってください。ファイル名はなんでもいいですが、拡張子を.batにして下さしい。<br>
+        コピーして使ってください。ファイル名はなんでもいいですが、拡張子を.batにして下さしい。<br>
 
         相対アドレスを使っているので、同じディレクトリにおいてください。デスクトップに2つとも置けば問題ないでしょう。<br>
         秒数は2秒となっていますが、1秒でもいいかもしれませんね。端末の性能次第でしょうか？
@@ -56,6 +56,7 @@
         参考になるサイト<br>
         <a href="https://chi2npui2.mydns.jp/PowerButton/PowerButton.html">電源関係ボタンのショートカット6種類を作成する</a><br>
         
+
     </p>
 </body>
 </html>
