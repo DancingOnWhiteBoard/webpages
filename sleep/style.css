@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 object{
-    background-color:rgb(220, 245, 221);
+    background-color:rgb(85, 45, 147);
     border:solid 2px green;
 }
 
@@ -10,6 +10,6 @@ section{
 }
 
 body{
-    margin: 10px;
-    padding: auto;
+    margin: 50px;
+    padding: 50px;
 }
