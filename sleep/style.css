@@ -8,6 +8,7 @@ object{
 
 section{
     background-color: rgb(178, 196, 246);
+    padding:30px;
 }
 
 body,p,h1,h2{
