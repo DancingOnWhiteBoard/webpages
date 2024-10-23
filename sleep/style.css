@@ -10,7 +10,7 @@ section{
     background-color: rgb(178, 196, 246);
 }
 
-body,p{
+body,p,h1,h2{
     margin: 40px;
     padding: 40px;
 }
