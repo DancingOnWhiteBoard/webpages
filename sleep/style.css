@@ -8,3 +8,8 @@ object{
 section{
     background-color: bisque;
 }
+
+body{
+    margin: 10px;
+    padding: auto;
+}
