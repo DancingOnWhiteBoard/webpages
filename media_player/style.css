@@ -16,6 +16,10 @@ h2{
     background-color: darkgray;
 }
 
+p{
+    margin:20px;
+}
+
 b{
     font-size: 20px;
 }
