@@ -100,14 +100,14 @@
                 一般的なアプリはそれで、別端末だと認識するそうだ。規制の厳しいアプリは違うらしい。
             </p>
         <h2>
-            MACアドレス:Androidの標準機能でランダム化されるため、アプリ側は最初から端末識別の手段として信用していません。さらに、現在のAndroid OSのセキュリティ規約により、一般のアプリが端末の「本物のMACアドレス」を勝手に覗き見ることは禁止されています。<br>
-            [1] (https://source.android.com/docs/core/connect/wifi-mac-randomization-behavior), <br>
-            [2] (https://medium.com/@elminson/the-journey-to-creating-a-persistent-synthetic-mac-address-on-android-019d96bfd045), <br>
-            [3] (https://www.bachao.ai/blog/android-sepolicy-flaw-factory-mac-address-exposure-smb-risk) <br>
+            MACアドレス:Androidの標準機能でランダム化されるため、アプリ側は最初から端末識別の手段として信用していません。さらに、現在のAndroid OSのセキュリティ規約により、一般のアプリが端末の「本物のMACアドレス」を勝手に覗き見ることは禁止されています。
         </h2>
-            <p>
-                端末のMACアドレスって、どうでもよかったんだーーー
-            </p>
+            <h3>[1] (https://source.android.com/docs/core/connect/wifi-mac-randomization-behavior), <br>
+                [2] (https://medium.com/@elminson/the-journey-to-creating-a-persistent-synthetic-mac-address-on-android-019d96bfd045), <br>
+            </h3>
+                <p>
+                    端末のMACアドレスって、どうでもよかったんだーーー
+                </p>
         <h2>Android OSの「ランダムMACアドレス」は、Wi-Fiに接続する際、端末本来の固定された識別番号（ハードウェアMACアドレス）の代わりに、一時的に生成した偽のMACアドレスを使って通信する仕組みです。</h2>
             <p>まとめ<br>
                 MACアドレス： Androidが自分でランダムに偽装する。<br>
