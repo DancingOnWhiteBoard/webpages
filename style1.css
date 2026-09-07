@@ -21,6 +21,8 @@ h1{
     background-color: blueviolet;
     border-bottom:3px double green;
     border-top:3px solid green;
+    border-radius: 30px;
+    padding: 20px;
     
 }
 
