@@ -81,3 +81,7 @@ ul.inline li{
     padding:10px;
     margin:10px;
 }
+
+.quote-box{
+    background-color: #fffde7;  /* 薄い黄色*/
+}
