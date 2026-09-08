@@ -265,10 +265,12 @@
             以下引用、aタグは後でつける予定　<br>
             <div class="quote-box">
                 🗒 外部連携で提供される2つのID形式<br>
+                <br>
                 1. <b>userAuthorizationId（ユーザー認可ID）</b> <br>
                 ※システム連携の主軸外部サービスがPayPay決済を呼び出したり、ユーザーを識別・管理したりする際に最も重要となるシステム用のIDです。 <br>
                 [1] (https://www.paypay.ne.jp/opa/doc/jp/v1.0/account_link.html)形式・桁数： 最大64文字の英数字（文字列）特徴： ユーザーが「連携を許可」した際に、PayPay側から企業のサーバーへ暗号化（JWTトークン）された状態で渡されます。データベースにはこの値を保存してユーザーの紐付けを行います。 
                 [1] (https://www.paypay.ne.jp/opa/doc/jp/v1.0/account_link.html) <br>
+                <br>
                 2. <b>profileIdentifier（プロフィール識別子）</b> <br>
                 ユーザーが一般的にアプリで見ている「ユーザーID（16桁の英数字）」に近い、あるいはそれをマスキング・暗号化した識別子です。 <br>
                 [1] (https://paypay.ne.jp/help/c0136/), 
@@ -276,9 +278,13 @@
                 <br>
                 同じ加盟店（事業者）において、一度連携を解除したユーザーが再度アカウントリンク（ユーザー認可）を行った場合でも、userAuthorizationId は変わりません（前回と同じ値が返却されます）。 <br>
                 [1] (https://integration.paypay.ne.jp/hc/ja/articles/4414048496655-%E5%90%8C%E3%81%98%E5%8A%A0%E7%9B%9F%E5%BA%97-ID-clientId-%E3%81%AB%E3%81%A6-%E5%90%8C%E3%81%98PayPay%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%A7%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E8%AA%8D%E5%8F%AF%E3%82%92%E8%A4%87%E6%95%B0%E5%9B%9E%E8%A1%8C%E3%81%86%E5%A0%B4%E5%90%88-userAuthorizationId%E3%81%AF%E6%AF%8E%E5%9B%9E%E5%A4%89%E3%82%8F%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B) <br>
+                <br>
                 公式FAQの回答（根拠）：<br>
-                「いいえ。userAuthorizationId（authorizationId）は、加盟店 ID（clientId）とPayPayユーザーの組み合わせにより一意に生成されるため、ユーザー認可を複数回行なった場合でもuserAuthorizationIdは変わりません。有効期限切れ後の再ユーザー認可、認可解除後の再ユーザー認可も同様です。」<br>
-                💡 例外的に「変わる」ケースIDが変わるのは以下のようにPayPayアカウントそのものが作り直された場合のみです。<br>
+                「いいえ。userAuthorizationId（authorizationId）は、加盟店 ID（clientId）とPayPayユーザーの組み合わせにより一意に生成されるため、ユーザー認可を複数回行なった場合でもuserAuthorizationIdは変わりません。<br>
+                有効期限切れ後の再ユーザー認可、認可解除後の再ユーザー認可も同様です。」<br>
+                <br>
+                💡 例外的に「変わる」ケース <br>
+                IDが変わるのは以下のようにPayPayアカウントそのものが作り直された場合のみです。<br>
                  [1] (https://integration.paypay.ne.jp/hc/en-us/articles/4414063040655-Will-the-userAuthorizationId-change-if-the-user-deleted-PayPay-account-and-re-registered-again-with-same-phone-number) <br>
                  ユーザーがPayPayアカウント自体を完全に「解約（退会）」し、その後同じ電話番号で新規登録し直してから連携した場合（この場合は内部のPayPayユーザー情報が変わるため、userAuthorizationId も変化します）。<br>
                  <br>
@@ -319,6 +325,12 @@
                     「解約」してから作り直す古いアカウントを完全に解約（削除）すれば、システム内の本人確認データが解放されます。その後であれば、新しい電話番号のアカウントで改めて本人確認を通すことができます <br>
                     （ただし、解約からデータ反映まで数日〜のタイムラグが生じ、その間エラーになる場合があります）。<br>
                      [1] (https://paypay.ne.jp/help/c0431/)
+                     <br>
+                     仮に本人確認した別アカウントに心当たりがなくても、PayPayの公式ホームページ（ヘルプ）には、<br>
+                     「登録されている本人確認情報を別人の情報に変更することはできない」、そして「第三者のアカウントをサポート側が代わりに削除・解約することはできない」という旨の制限が厳格に敷かれています。 <br>
+                     [1] (https://paypay.ne.jp/help/c0431/), [2] (https://paypay.ne.jp/help/c0431/) <br>
+                     <br>
+
 
 
             </div>
