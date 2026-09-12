@@ -86,3 +86,7 @@ ul.inline li{
     background-color: #ebe7c2;  /* 薄い黄色*/
     padding: 20px;
 }
+
+.size_text{
+    font-size: 30px;
+}
